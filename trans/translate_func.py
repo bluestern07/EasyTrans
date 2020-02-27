@@ -143,8 +143,8 @@ def baidu_translate(content):
         return '输入请不要超过4891个字符！'
     salt = str(random.randint(0, 50))
     # 申请网站 http://api.fanyi.baidu.com/api/trans
-    appid = '20191210000364718' # 这里写你自己申请的
-    secretKey = 'e83BXpQFTnXrTy62O9MO'# 这里写你自己申请的
+    appid = '20200224000388269' # 这里写你自己申请的
+    secretKey = 'qMHBhaYIWDOPNzLp2hKJ'# 这里写你自己申请的
     sign = appid + content + salt + secretKey
     sign = hashlib.md5(sign.encode(encoding='UTF-8')).hexdigest()
     head = {'q': f'{content}',
